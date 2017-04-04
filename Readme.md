@@ -7,12 +7,25 @@
 2. in `another` branch, file_a has been update and merge to `master`
 3. Want to continue working in `current` after merge latest `master`
 
+### Steps
+```
+2-1
+$ git checkout -b current
+# update file_a
+$ git cm -a -m "Update file A in current branch"
+2-2
+$ git checkout -b another
+# update file_a
+$ git add file_a
+$ git cm -m "Update file A in another branch"
+```
+
 ## Scinario 1: 2 different branch from same master
 
 When you want to develop function A and function B separately, you need 2 different branch from same master.
 After creating branch for A, how to create branch B with original status.
 
-### How to manage
+### Steps
 
 What you need to do is just checkout master and create second branch.
 
